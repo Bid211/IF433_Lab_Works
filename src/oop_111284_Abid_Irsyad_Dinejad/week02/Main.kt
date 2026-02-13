@@ -4,34 +4,20 @@ import java.util.Scanner
 
 fun main() {
     val scanner = Scanner(System.`in`)
+    println("--- Sistem Perpustakaan ---")
+    print("Judul Buku: ")
+    val title = scanner.nextLine()
+    print("Peminjam: ")
+    val borrower = scanner.nextLine()
+    print("Lama Pinjam (hari): ")
+    var duration = scanner.nextInt()
 
-    println("--- APLIKASI PMB UMN ---")
-    print("Masukkan Nama: ")
-    val name = scanner.nextLine()
-
-    print("Masukkan NIM (5 karakter): ")
-    val nim = scanner.nextLine()
-
-    println("Pilih Jalur Pendaftaran:")
-    println("1. Reguler (Dengan Jurusan)")
-    println("2. Belum Pilih Jurusan")
-    print("Pilihan: ")
-    val path = scanner.nextInt()
-    scanner.nextLine()
-
-    val student: Student
-
-    if (path == 1) {
-        print("Masukkan Jurusan: ")
-        val major = scanner.nextLine()
-        student = Student(name, nim, major)
-    } else {
-        student = Student(name, nim)
+    // Validasi minus
+    if (duration < 0) {
+        println("Input tidak valid. Durasi diubah ke 1 hari.")
+        duration = 1
     }
 
-    println("\n--- HASIL PENDAFTARAN ---")
-    println("Nama    : ${student.name}")
-    println("NIM     : ${student.nim}")
-    println("Jurusan : ${student.major}")
-    println("GPA     : ${student.gpa}")
+    val loan = Loan(title, borrower, duration)
+    println("Denda Total: Rp ${loan.calculateFine()}")
 }
