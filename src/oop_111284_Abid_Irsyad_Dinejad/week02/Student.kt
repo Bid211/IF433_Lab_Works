@@ -1,4 +1,4 @@
-package oop_001_johnthor.week02
+package oop_111284_Abid_Irsyad_Dinejad.week02
 
 class Student(val name: String, val nim: String, var major: String, val gpa: Double = 0.0) {
     init {
