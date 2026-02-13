@@ -15,4 +15,8 @@ class Student (
             }
         }
     }
+    constructor(name: String, nim: String) : this(name, nim, "Non-Matriculated") {
+        println("Mahasiswa $name belum memilih jurusan.")
+    }
 }
+
