@@ -19,4 +19,22 @@ fun main() {
     println("Nama Senjata: ${weapon.name}")
     println("Tier Senjata: ${weapon.tier}")
     println("---------------------------------------------------\n")
+
+    println("=== PLAYER LEVELING ===")
+
+    val player = Player("KnightAlpha")
+
+    println("Username: ${player.username}")
+    println("Level Awal: ${player.level} (XP default: 0)")
+    println()
+
+    println("Menambah XP 50...")
+    player.addXp(50)
+    println("Level saat ini: ${player.level}")
+    println()
+
+    println("Menambah XP 60...")
+    player.addXp(60)
+    println("Level saat ini: ${player.level}")
+    println("---------------------------------------------------")
 }
