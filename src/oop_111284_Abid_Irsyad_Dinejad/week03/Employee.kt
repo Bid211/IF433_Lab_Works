@@ -3,7 +3,12 @@ package oop_111284_Abid_Irsyad_Dinejad.week03
 class Employee(val name: String) {
         var salary: Int = 0
             set(value) {
-                println("Employee salary: $salary")
-                this.salary = value
+                if (value < 0) {
+                    println("Error: Gaji tidak boleh kosong atau negativ!")
+                    field = 0
+                } else {
+                    field = value
+                }
+
             }
 }
