@@ -18,4 +18,14 @@ fun main(){
     tesla.accelerate()
     tesla.honk()
     tesla.openTrunk()
+
+    println("\n--- Tugas Mandiri 2: Employee Hierarchy ---")
+    val manager = Manager("Pak Budi", 10_000_000)
+    val developer = Developer("Andi", 8_000_000, "Kotlin")
+
+    manager.work()
+    println("Bonus Manager: Rp ${manager.calculateBonus()}")
+
+    developer.work()
+    println("Bonus Developer: Rp ${developer.calculateBonus()}")
 }
