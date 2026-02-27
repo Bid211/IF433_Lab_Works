@@ -8,7 +8,7 @@ open class Vehicle(val brand: String) {
         println("$brand acceleration. Speed: $speed km/h")
     }
 
-    open fun honk{
+    open fun honk(){
         println("Beep! Beep!")
     }
 }
