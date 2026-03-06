@@ -22,4 +22,16 @@ fun main(){
         }
         println("----------------------------")
     }
+
+    println("\n--- Tugas Mandiri 1: Method Overloading ---")
+    val math = MathHelper()
+
+    val luasPersegi = math.hitungLuas(5)
+    val luasPersegiPanjang = math.hitungLuas(4, 6)
+    val luasLingkaran = math.hitungLuas(7.0)
+
+    println("Luas Persegi (sisi=5): $luasPersegi")
+    println("Luas Persegi Panjang (p=4, l=6): $luasPersegiPanjang")
+    println("Luas Lingkaran (r=7.0): $luasLingkaran")
+
 }
