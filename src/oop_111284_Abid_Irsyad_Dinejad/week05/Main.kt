@@ -34,4 +34,26 @@ fun main(){
     println("Luas Persegi Panjang (p=4, l=6): $luasPersegiPanjang")
     println("Luas Lingkaran (r=7.0): $luasLingkaran")
 
+
+
+    println("\n--- Tugas Mandiri 2: Payment System & Smart Casting ---")
+
+    val myWallet = EWallet("Dompet Digital", 50000.0)
+    val myCard = CreditCard("Visa Platinum", 100000.0)
+
+    val paymentMethods: List<PaymentMethod> = listOf(myWallet, myCard)
+
+    for (method in paymentMethods) {
+        println("\nMemproses pembayaran untuk: ${method.accountName}")
+
+        method.processPayment(75000.0)
+
+        if (method is EWallet) {
+            println("-> Terdeteksi EWallet. Melakukan top-up darurat...")
+            method.topUp(50000.0)
+
+            println("-> Mencoba pembayaran ulang...")
+            method.processPayment(75000.0)
+        }
+    }
 }
