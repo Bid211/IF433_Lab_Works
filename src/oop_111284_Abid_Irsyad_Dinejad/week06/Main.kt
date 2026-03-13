@@ -1,7 +1,5 @@
 package oop_111284_Abid_Irsyad_Dinejad.week06
 
-import oop_111284_Abid_Irsyad_Dinejad.week05.CreaditCard
-
 fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout.....")
     method.pay(amount)
@@ -15,7 +13,7 @@ fun main() {
     myPhone.turnOn()
 
     val pay1 = Gopay()
-    val pay2 = CreaditCard()
+    val pay2 = CreditCard()
 
     println("\n=== TESTING CARD ===")
     processCheckout(method = pay1, amount = 500000.0)
