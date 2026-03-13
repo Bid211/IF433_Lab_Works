@@ -19,3 +19,4 @@ fun main() {
     processCheckout(method = pay1, amount = 500000.0)
     processCheckout(method = pay2, amount = 150000.0)
 }
+
