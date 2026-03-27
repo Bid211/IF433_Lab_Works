@@ -8,4 +8,13 @@ fun main() {
     println("\n === Test Object ===")
     val client = NetworkClient.createClient()
     client.connect()
+
+
+    println("\n=== Test Regular class ===")
+    val reg1 = RegularUser("Alice", 29)
+    val reg2 = RegularUser("Alice", 29)
+    println(reg1)
+    println("Sama ${reg1 == reg2}")
+
 }
+
