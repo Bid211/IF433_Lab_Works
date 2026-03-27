@@ -6,4 +6,10 @@ fun main() {
     GameManager.startGame()
     GameManager.startGame()
 
+    println("\n=== TEST FACTORY & ENUM ===")
+    println("Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Senjata Awal: ${starterWeapon.item}")
+
 }
