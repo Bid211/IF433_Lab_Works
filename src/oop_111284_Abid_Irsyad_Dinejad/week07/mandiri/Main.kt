@@ -12,4 +12,11 @@ fun main() {
     val starterWeapon = Weapon.forgeStarterSword()
     println("Senjata Awal: ${starterWeapon.item}")
 
+    println("\n=== TEST COPY & EVENTS ===")
+    val upgradedWeapon = starterWeapon.item.copy(damage = 25, name = "Pedang Kayu Bapuk Upgrade")
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedWeapon)) // Masukkan item hasil copy
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
