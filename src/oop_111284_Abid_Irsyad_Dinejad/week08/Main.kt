@@ -1,5 +1,7 @@
 package oop_111284_Abid_Irsyad_Dinejad.week08
 
+import com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.length
+
 fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
@@ -54,4 +56,11 @@ fun main() {
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
+
+    println("\n=== TEST JAVA INTEROP ===")
+    val javaResponse = LegacyJavaAPI.fetchServerStatus()
+
+    val statusLength = javaResponse!!.length
+    println("Status dari Java: $javaResponse (length: $statusLength)")
+
 }
