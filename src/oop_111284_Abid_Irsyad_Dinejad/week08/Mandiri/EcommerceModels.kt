@@ -1,6 +1,6 @@
 package oop_111284_Abid_Irsyad_Dinejad.week08.Mandiri
 
-selaed class Product
+sealed class Product
 
 data class Electronic(
     val id: String,
