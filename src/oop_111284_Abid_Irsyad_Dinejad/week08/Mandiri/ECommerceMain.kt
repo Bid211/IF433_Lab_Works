@@ -27,4 +27,13 @@ fun main() {
     }
 
     println("=== PROSES SELESAI ===")
+
+
+    // === MEMULAI PROSES BATCH ===
+    //Checkout Sukses: TRX-E01-SUCCESS untuk produk Electronic
+    //Checkout Sukses: TRX-C01-SUCCESS untuk produk Clothing
+    //Checkout Sukses: TRX-E02-SUCCESS untuk produk Electronic
+    //WARNING: Data Korup terdeteksi - API Invalid: Missing ID
+    //Data dilewati: Tipe produk tidak dikenali atau NULL
+    //=== PROSES SELESAI ===
 }
