@@ -35,3 +35,11 @@ fun main() {
     println("Unique Traded Pairs: $uniquePairs")
 
 }
+
+// === CRYPTO TRADING DASHBOARD ===
+//WIN [ETHUSDT - LONG]: +25.0% ROE (Lev: 20x)
+//WIN [BTCUSDT - LONG]: +15.5% ROE (Lev: 20x)
+//LOSS [ETHUSDT - SHORT]: -5.2% ROE (Lev: 10x)
+//LOSS [BTCUSDT - SHORT]: -2.5% ROE (Lev: 10x)
+//-------------------------------
+//Unique Traded Pairs: [BTCUSDT, ETHUSDT, SOLUSDT, DOGEUSDT]
