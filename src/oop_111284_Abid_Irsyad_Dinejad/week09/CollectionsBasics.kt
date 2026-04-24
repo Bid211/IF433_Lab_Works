@@ -25,7 +25,7 @@ fun main() {
         "Bob" to "B",
         "Charlie" to "A"
     )
-    println("Nilai Bob: {$studentGrades}")
+    println("Nilai Bob: ${studentGrades["Bob"]}")
 
     val inventory = mutableMapOf("Apples" to 50, "Bananas" to 30)
     inventory["Oranges"] = 20
