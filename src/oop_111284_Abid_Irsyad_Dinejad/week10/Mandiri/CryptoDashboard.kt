@@ -12,6 +12,10 @@ fun main() {
     val response = ApiResponse("200 OK", coinRepo.getAll())
     println("Network Response Created: Status ${response.status}")
 
-
+    println("\n--- My Crypto Assets ---")
+    println("Status: ${response.status}")
+    response.data.forEach { coin ->
+        println("Coin: ${coin.name}, Balance: ${coin.balance}")
+    }
 
 }
