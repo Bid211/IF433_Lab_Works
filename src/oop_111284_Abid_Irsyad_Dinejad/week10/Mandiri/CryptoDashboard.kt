@@ -2,37 +2,34 @@ package oop_111284_Abid_Irsyad_Dinejad.week10.Mandiri
 
 fun main() {
     val coinRepo = WalletRepository<Coin>()
-    println("--- Crypto Dashboard Initialized ---")
 
-    coinRepo.add(Coin("BTC", 0.5))
-    coinRepo.add(Coin("ETH", 4.2))
-    coinRepo.add(Coin("USDT", 1000.0))
-    println("Coins added to repository.")
+    coinRepo.add(Coin("BTC", 0.5234))
+    coinRepo.add(Coin("ETH", 12.5))
+    coinRepo.add(Coin("USDT", 1500.0))
 
-    val response = ApiResponse("200 OK", coinRepo.getAll())
-    println("Network Response Created: Status ${response.status}")
+    val coinResponse = ApiResponse("200 OK", coinRepo.getAll())
 
-    println("\n--- My Crypto Assets ---")
-    println("Status: ${response.status}")
-    response.data.forEach { coin ->
-        println("Coin: ${coin.name}, Balance: ${coin.balance}")
+    println("=== CRYPTO DASHBOARD ===")
+    println("Status: ${coinResponse.status}")
+    coinResponse.data.forEach { coin ->
+        println("Asset: ${coin.name} | Balance: ${coin.balance}")
     }
+
+    println("\n" + "=".repeat(25) + "\n")
+
     val txRepo = WalletRepository<Transaction>()
-    txRepo.add(Transaction("TX001", 0.05))
-    txRepo.add(Transaction("TX002", 150.0))
-    txRepo.add(Transaction("TX003", 20.0))
-    println("\nTransactions added: ${txRepo.getAll().size} records.")
+    txRepo.add(Transaction("TX-9901", 0.015))
+    txRepo.add(Transaction("TX-9902", 2.0))
 
+    val txResponse = ApiResponse("200 OK", txRepo.getAll())
 
-    println("\n--- Testing Search Constraint ---")
-    val btcCoins = coinRepo.findByName("BTC")
-    if (btcCoins.isNotEmpty()) {
-        println("Found BTC Coin: ${btcCoins.first().name} with balance ${btcCoins.first().balance}")
-    } else {
-        println("BTC Coin not found.")
+    println("=== TRANSACTION HISTORY ===")
+    println("Status: ${txResponse.status}")
+    txResponse.data.forEach { tx ->
+        println("ID: ${tx.id} | Amount: ${tx.amount}")
     }
-    val solCoins = coinRepo.findByName("SOL")
-    println("Searching for SOL: Found ${solCoins.size} items.")
 
-    println("\n--- System Test Complete ---")
+    println("\n=== SEARCH RESULT (BTC) ===")
+    val btcOnly = coinRepo.search { it.name == "BTC" }
+    println(btcOnly)
 }
