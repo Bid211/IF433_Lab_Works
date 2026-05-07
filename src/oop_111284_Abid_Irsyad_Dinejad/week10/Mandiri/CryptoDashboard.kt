@@ -9,5 +9,9 @@ fun main() {
     coinRepo.add(Coin("USDT", 1000.0))
     println("Coins added to repository.")
 
+    val response = ApiResponse("200 OK", coinRepo.getAll())
+    println("Network Response Created: Status ${response.status}")
+
+
 
 }
