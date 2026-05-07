@@ -23,4 +23,16 @@ fun main() {
     txRepo.add(Transaction("TX003", 20.0))
     println("\nTransactions added: ${txRepo.getAll().size} records.")
 
+
+    println("\n--- Testing Search Constraint ---")
+    val btcCoins = coinRepo.findByName("BTC")
+    if (btcCoins.isNotEmpty()) {
+        println("Found BTC Coin: ${btcCoins.first().name} with balance ${btcCoins.first().balance}")
+    } else {
+        println("BTC Coin not found.")
+    }
+    val solCoins = coinRepo.findByName("SOL")
+    println("Searching for SOL: Found ${solCoins.size} items.")
+
+    println("\n--- System Test Complete ---")
 }
