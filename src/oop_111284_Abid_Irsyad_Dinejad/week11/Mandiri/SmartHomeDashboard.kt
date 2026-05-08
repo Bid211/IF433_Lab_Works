@@ -36,3 +36,11 @@ fun main() {
         println(device.diagnose())
     }
 
+    with(homeDevices) {
+        println("=== RANGKUMAN DASHBOARD ===")
+        println("Total Perangkat Terdaftar: ${this.size}")
+    }
+
+
+}
+
