@@ -11,3 +11,13 @@ fun main() {
         .also { device ->
             homeDevices.add(device)
         }
+
+    SmartDevice("Ezviz Outdoor", "Camera")
+        .apply {
+            isOnline = true
+            powerLoad = 5
+        }
+        .also { device ->
+            println("(LOG) Kamera terhubung")
+            homeDevices.add(device)
+        }
