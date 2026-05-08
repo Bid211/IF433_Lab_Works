@@ -46,6 +46,10 @@ fun main() {
     }
     println("Total Beban Daya: $totalPower Watt")
 
+    println("\n=== STATUS DETAIL PERANGKAT ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
 
 }
 
