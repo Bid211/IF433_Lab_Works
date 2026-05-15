@@ -17,3 +17,18 @@ class BankAccount(var balance: Double) {
         println("The balance is $balance")
     }
 }
+
+fun main() {
+    println("=== Test Multiple Catch ===")
+    val account = BankAccount(100.0)
+
+    try{
+        account.withdraw(150.0)
+    } catch (e: InsufficientCapacityException) {
+        println("Caught Domain Error: Uang tidak cukup. ${e.message}")
+    } catch (e: IllegalArgumentException) {
+        println("Caught Argument Error: Intput Tidak Valid ${e.message}")
+    } catch (e: Exception) {
+        println("Caught Genera Error: Terjadi Kesalahan tidak terduga")
+    }
+}
