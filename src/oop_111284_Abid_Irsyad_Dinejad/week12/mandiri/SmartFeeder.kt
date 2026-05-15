@@ -42,3 +42,10 @@ fun main() {
     }
 }
 
+// === JADWAL MAKAN PAGI ===
+//Siklus pengecekan dispenser pagi selesai.
+//
+//=== JADWAL MAKAN SORE ===
+//Makan sore sukses! Sisa stok kibble: 0
+//
+//Process finished with exit code 0
