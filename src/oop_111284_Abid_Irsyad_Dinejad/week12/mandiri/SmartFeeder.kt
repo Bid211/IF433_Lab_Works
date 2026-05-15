@@ -26,4 +26,7 @@ fun main() {
         println("Caught Stock Error: ${e.message}")
     } catch (e: Exception) {
         println("Caught Unexpected Error: ${e.message}")
+    } finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
+
