@@ -8,4 +8,8 @@ fun main() {
     file.writeText("Line 1: Sistem Inisialisasi. \n")
     println("File berhasil dibuat dan ditulis")
 
+    file.appendText("Line 2 : Menambakan Konfigurasi Baru. \n")
+    println("Teks Berhasil di-append")
+
 }
+
