@@ -23,4 +23,12 @@ fun main() {
         }
     }
     println("100 baris log berhasil di generate dengan aman")
+
+    println("\n=== Test Buffered Reader ===")
+
+    safeFile.bufferedReader().use { reader ->
+        reader.lineSequence().take(5).forEach { line ->
+            println("Steam ReadL $line")
+        }
+    }
 }
