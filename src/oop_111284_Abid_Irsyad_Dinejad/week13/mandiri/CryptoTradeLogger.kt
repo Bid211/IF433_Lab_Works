@@ -57,5 +57,7 @@ fun main() {
     saveTrades(trades, "crypto_trades.csv")
     println(">> Data trade simulasi berhasil disimpan ke crypto_trades.csv")
 
+    File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+    println(">> Baris kotor (malformed) sengaja di-inject ke file untuk testing robustness.")
 
 
