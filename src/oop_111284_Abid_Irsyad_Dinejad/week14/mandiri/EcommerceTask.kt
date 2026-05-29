@@ -1,7 +1,7 @@
 package oop_111284_Abid_Irsyad_Dinejad.week14.mandiri
 import java.io.File
 
-class BadOrderProcessor {
+class EcommerceTask {
     private val file = File("orders.csv")
 
     fun processOrder(itemName: String, basePrice: Double, customerType: String) {
