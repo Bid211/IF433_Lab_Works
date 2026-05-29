@@ -8,7 +8,7 @@ class UserManager {
     }
 
     fun saveUserToDatabase(user: User) {
-        println("Inserting ${user.name} to database ${user.email}")
+        println("Inserting ${user.name} ${user.email}")
     }
 
     fun sendWelcomeEmail(user: User) {
